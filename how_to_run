@@ -1,0 +1,15 @@
+source /opt/ros/humble/setup.bash
+source /home/eurobin-wp1/ros2_vision/install/setup.bash
+export ROS_DOMAIN_ID=38
+export ROS_LOCALHOST_ONLY=0
+/home/eurobin-wp1/eurobin/mais_project/2_ibject_detect/train_object/.venv/bin/python /home/eurobin-wp1/eurobin/mais_project/2_ibject_detect/train_object/realtime_components_realsense_robot.py
+
+
+ros2 run handeye_realsense eye2hand
+ros2 run tf2_ros tf2_echo fr3_link8 camera/color/optical_frame
+
+
+
+# to run : ros2 run handeye_realsense eye2hand
+# cd ros2_vision/
+# cd src/ 
